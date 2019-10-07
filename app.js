@@ -10,7 +10,6 @@ const { argv } = require("yargs").options({
 });
 
 const getInfo = async city => {
-  console.log(city);
   try {
     const coord = await getLocation(city);
     const temp = await getWeather(coord.lat, coord.lon);
